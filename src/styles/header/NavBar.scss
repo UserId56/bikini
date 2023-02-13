@@ -1,0 +1,71 @@
+@import "@/styles/variables.scss";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $backgroundInterfaceColor;
+
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
+}
+
+.navigation-search {
+    width: 34px;
+    height: 34px;
+    background: url("@/assets/images/search.png");
+}
+
+.navigation-wish {
+    width: 34px;
+    height: 34px;
+    background: url("@/assets/images/Wish.png");
+}
+
+@media (max-width: 768px) {
+    nav {
+        border-bottom: 1px solid #f0f0f0;
+        color: #2c2c2c;
+    }
+
+    .navigation-home {
+        margin: 0 24px;
+    }
+
+    .navigation-menu {
+        width: 26px;
+        height: 2px;
+        margin-left: 8px;
+        background: #2c2c2c;
+        position: relative;
+        border: none;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 26px;
+            background: #2c2c2c;
+            left: 0px;
+            top: 8px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 26px;
+            background: #2c2c2c;
+            left: 0px;
+            top: -8px;
+        }
+    }
+}
